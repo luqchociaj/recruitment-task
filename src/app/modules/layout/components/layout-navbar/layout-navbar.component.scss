@@ -1,0 +1,28 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.right {
+  flex: 0 0 auto;
+  justify-content: right;
+}
+
+.left {
+  height: 50px;
+  padding-right: 16px;
+  justify-content: left;
+}
+
+.center {
+  flex-grow: 1;
+  max-width: 1860px;
+  justify-content: left;
+}
+
+nav {
+  height: 50px;
+  padding-left: 0;
+  display: flex;
+  justify-content: space-between;
+}

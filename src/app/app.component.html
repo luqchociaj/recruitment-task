@@ -1,0 +1,12 @@
+<app-dashboard>
+  <app-navbar header>
+    <app-navbar-logo leftNavbarComponent></app-navbar-logo>
+    <app-back-button *ngIf="router.url!=='/regions'" [routeUrl]="router.url" rightNavbarComponent></app-back-button>
+  </app-navbar>
+  <ng-container mainContainer>
+    <router-outlet></router-outlet>
+  </ng-container>
+  <app-navbar footer>
+    <app-about-author rightNavbarComponent></app-about-author>
+  </app-navbar>
+</app-dashboard>

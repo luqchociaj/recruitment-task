@@ -1,0 +1,8 @@
+<div class="country-item" (click)="openDetailsView()">
+  <div class="country-item__image-wrapper">
+    <img *ngIf="country?.flag" [src]="country.flag" height="50" />
+  </div>
+  <div class="country-item__name-wrapper">
+    <span>{{country?.name}}</span>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="categories-header">
+  <h1>Select Region</h1>
+</div>
+<div class="categories">
+  <div class="categories__wrapper">
+    <div
+      [style.background-image]="'url(' + region.imageSrc + ')'"
+      *ngFor="let region of regions"
+      class="categories__wrapper__tile"
+      (click)="openRegionCountryList(region)"
+    >
+      <spam class="categories__wrapper__tile__text">
+        {{ region.regionName | uppercase }}
+      </spam>
+    </div>
+  </div>
+</div>

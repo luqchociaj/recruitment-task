@@ -1,0 +1,15 @@
+  <div class="container">
+    <mat-toolbar color="primary" role="heading">
+      <div class="main-navbar">
+        <ng-content select="[header]"> </ng-content>
+      </div>
+    </mat-toolbar>
+    <div class="main-container">
+      <ng-content select="[mainContainer]"> </ng-content>
+    </div>
+    <mat-toolbar color="primary" role="heading">
+      <div class="main-navbar">
+        <ng-content select="[footer]"> </ng-content>
+      </div>
+    </mat-toolbar>
+  </div>

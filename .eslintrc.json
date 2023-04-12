@@ -1,0 +1,163 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+        "comma-dangle": 2,
+        "max-len": [
+          "error",
+          {
+            "code": 120,
+            "tabWidth": 2,
+            "ignoreRegExpLiterals": true,
+            "ignoreUrls": true,
+            "ignoreComments": true,
+            "ignoreStrings": true
+          }
+        ],
+        "lines-between-class-members": [
+          "error",
+          "always",
+          {
+            "exceptAfterSingleLine": true
+          }
+        ],
+        "no-multiple-empty-lines": [
+          "error",
+          {
+            "max": 1,
+            "maxEOF": 0
+          }
+        ],
+        "padded-blocks": [
+          "error",
+          {
+            "blocks": "always"
+          }
+        ],
+        "object-curly-spacing": [
+          "error",
+          "always"
+        ],
+        "@typescript-eslint/indent": [
+          "error",
+          "tab"
+        ],
+        "quotes": [
+          "error",
+          "single"
+        ],
+        "padding-line-between-statements": [
+          "error",
+          {
+            "blankLine": "always",
+            "prev": [
+              "const",
+              "let",
+              "var"
+            ],
+            "next": "*"
+          },
+          {
+            "blankLine": "any",
+            "prev": [
+              "const",
+              "let",
+              "var"
+            ],
+            "next": [
+              "const",
+              "let",
+              "var"
+            ]
+          }
+        ],
+        "object-curly-newline": [
+          "error",
+          {
+            "minProperties": 2
+          }
+        ],
+        "array-bracket-spacing": [
+          "error",
+          "always"
+        ],
+        "object-property-newline": [
+          "error",
+          {
+            "allowAllPropertiesOnSameLine": false
+          }
+        ],
+        "array-element-newline": [
+          "error",
+          {
+            "minItems": 3
+          }
+        ],
+        "array-bracket-newline": [
+          "error",
+          {
+            "minItems": 4
+          }
+        ],
+        "space-in-parens": [
+          "error",
+          "always"
+        ],
+        "newline-per-chained-call": [
+          "error",
+          {
+            "ignoreChainWithDepth": 1
+          }
+        ],
+        "@typescript-eslint/no-explicit-any": "warn",
+        "@typescript-eslint/explicit-member-accessibility": [
+          "error",
+          {
+            "accessibility": "explicit"
+          }
+        ],
+        "angular/document-service": "off",
+        "jsdoc/require-param-description": 0,
+        "jsdoc/require-returns-description": 0,
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {}
+    }
+  ]
+}

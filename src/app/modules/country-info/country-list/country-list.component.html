@@ -1,0 +1,19 @@
+<ng-template #loading>
+  <app-loading-indicator></app-loading-indicator>
+</ng-template>
+<div class="country-list">
+  <div class="country-list__header">
+    <h1>Region: {{ selectedRegionName }}</h1>
+  </div>
+  <div class="country-list__wrapper">
+    <ng-container
+      *ngIf="regionCountries$ | async as regionCountries; else loading"
+    >
+      <app-country-list-item
+        *ngFor="let country of regionCountries | sortByName"
+        [country]="country"
+        [region]="selectedRegionName"
+      ></app-country-list-item>
+    </ng-container>
+  </div>
+</div>

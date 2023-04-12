@@ -1,0 +1,45 @@
+<div *ngIf="isLoading">
+  <app-loading-indicator></app-loading-indicator>
+</div>
+<div *ngIf="!isLoading" class="country-details">
+  <div class="country-details__header">
+    <h1>Country: {{ selectedCountryName }}</h1>
+  </div>
+  <div class="country-details__wrapper">
+    <div class="country-details__wrapper__row-title">
+      <div class="country-details__wrapper__row-title__image-wrapper">
+        <img [src]="selectedCountryDetails.flag" height="50" />
+      </div>
+      <div class="country-details__wrapper__row-title__name-wrapper">
+        <h1>{{ selectedCountryDetails.altSpelling }}</h1>
+      </div>
+    </div>
+
+    <div class="country-details__wrapper__row">
+      <div class="country-details__wrapper__row__label">
+        <span>Capital:</span>
+      </div>
+      <div class="country-details__wrapper__row__value">
+        <span>{{ selectedCountryDetails.capital }}</span>
+      </div>
+    </div>
+
+    <div class="country-details__wrapper__row">
+      <div class="country-details__wrapper__row__label">
+        <span>Currency:</span>
+      </div>
+      <div class="country-details__wrapper__row__value">
+        <span>{{ selectedCountryDetails.currency }}</span>
+      </div>
+    </div>
+
+    <div class="country-details__wrapper__row">
+      <div class="country-details__wrapper__row__label">
+        <span>Population:</span>
+      </div>
+      <div class="country-details__wrapper__row__value">
+        <span>{{ selectedCountryDetails.population }}</span>
+      </div>
+    </div>
+  </div>
+</div>

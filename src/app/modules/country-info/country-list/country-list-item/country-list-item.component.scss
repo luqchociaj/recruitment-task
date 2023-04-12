@@ -1,0 +1,31 @@
+.country-item {
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  border-bottom: 1px solid #ccc;
+  transition: filter 0.5s ease;
+  border: var(--color--wrapper--border--dark);
+  -webkit-box-shadow: var(--color--wrapper--border);
+  box-shadow: var(--color--wrapper--border);
+
+  &__image-wrapper ,
+  &__name-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  &__image-wrapper {
+    width: 150px;
+  }
+  &__name-wrapper {
+    width: 100%;
+  }
+}
+
+.country-item:hover {
+  filter: brightness(70%);
+  background-color: var(--color--gray);
+}
